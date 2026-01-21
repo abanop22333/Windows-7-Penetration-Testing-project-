@@ -4,7 +4,7 @@ Hands-on penetration testing lab exploiting MS17-010 (EternalBlue) on a vulnerab
 
 This project demonstrates a full compromise of a Windows 7 vulnerable virtual machine (Blue) by exploiting the critical MS17-010 (EternalBlue) vulnerability.
 The assessment covers reconnaissance, exploitation, and post-exploitation in a controlled lab environment.
-
+---
 ##🧪 Lab Environment
 
 Target: Windows 7 (Blue – Vulnerable VM)
