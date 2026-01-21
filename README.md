@@ -1,10 +1,11 @@
-Hands-on penetration testing lab exploiting MS17-010 (EternalBlue) on a vulnerable Windows 7 system to achieve SYSTEM-level access and demonstrate post-exploitation risks.
+#💣 Windows 7 EternalBlue – Penetration Testing Lab
 
+Hands-on penetration testing lab exploiting MS17-010 **(EternalBlue)** on a vulnerable **Windows 7 ** system to achieve SYSTEM-level access and demonstrate post-exploitation risks.
+--
 ##📌 Project Summary
 
 This project demonstrates a full compromise of a Windows 7 vulnerable virtual machine (Blue) by exploiting the critical MS17-010 (EternalBlue) vulnerability.
 The assessment covers reconnaissance, exploitation, and post-exploitation in a controlled lab environment.
----
 ##🧪 Lab Environment
 
 Target: Windows 7 (Blue – Vulnerable VM)
